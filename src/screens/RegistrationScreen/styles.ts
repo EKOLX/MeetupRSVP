@@ -6,14 +6,12 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#FFFFFF",
+    padding: 32,
   },
   header: {
     fontSize: 22,
     fontWeight: "600",
     textAlign: "center",
     marginBottom: 32,
-  },
-  submit: {
-    marginTop: 32,
   },
 });
