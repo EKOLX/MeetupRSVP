@@ -5,7 +5,13 @@ import Colors from "../../constants/Colors";
 
 type InputProps = TextInput["props"] & { label: string; error?: string };
 
-const Input: FC<InputProps> = ({ style, label, error, ...otherProps }) => {
+const Input: FC<InputProps> = ({
+  label,
+  error,
+  style,
+  returnKeyType = "done",
+  ...otherProps
+}) => {
   const [isFocused, setIsFocused] = useState(false);
 
   return (
@@ -17,6 +23,7 @@ const Input: FC<InputProps> = ({ style, label, error, ...otherProps }) => {
           style,
           { borderColor: error && !isFocused ? Colors.red : Colors.gray },
         ]}
+        returnKeyType={returnKeyType}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
         {...otherProps}
