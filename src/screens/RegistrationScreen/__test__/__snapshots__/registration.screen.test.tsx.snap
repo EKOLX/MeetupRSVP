@@ -1,0 +1,411 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Registration screen should match snapshot 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+      "justifyContent": "center",
+      "padding": 32,
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "fontSize": 22,
+        "fontWeight": "600",
+        "marginBottom": 32,
+        "textAlign": "center",
+      }
+    }
+  >
+    Start registration to participate in the meetup
+  </Text>
+  <View
+    onLayout={[Function]}
+    style={
+      [
+        {
+          "flex": 1,
+          "width": "100%",
+        },
+        {
+          "paddingBottom": 0,
+        },
+      ]
+    }
+  >
+    <RCTScrollView
+      showsVerticalScrollIndicator={false}
+    >
+      <View>
+        <View
+          style={
+            {
+              "marginVertical": 6,
+              "width": "100%",
+            }
+          }
+          testID="inputName"
+        >
+          <Text
+            style={
+              {
+                "color": "#BACDDB",
+                "fontSize": 13,
+                "marginBottom": 3,
+              }
+            }
+          >
+            Name
+          </Text>
+          <TextInput
+            onBlur={[Function]}
+            onChangeText={[Function]}
+            onFocus={[Function]}
+            placeholder="Jack"
+            returnKeyType="done"
+            style={
+              [
+                {
+                  "borderRadius": 6,
+                  "borderWidth": 1,
+                  "fontSize": 16,
+                  "padding": 6,
+                },
+                undefined,
+                {
+                  "borderColor": "#BACDDB",
+                },
+              ]
+            }
+          />
+        </View>
+        <View
+          style={
+            {
+              "marginVertical": 6,
+              "width": "100%",
+            }
+          }
+          testID="inputAge"
+        >
+          <Text
+            style={
+              {
+                "color": "#BACDDB",
+                "fontSize": 13,
+                "marginBottom": 3,
+              }
+            }
+          >
+            Age
+          </Text>
+          <TextInput
+            inputMode="numeric"
+            onBlur={[Function]}
+            onChangeText={[Function]}
+            onFocus={[Function]}
+            placeholder="33"
+            returnKeyType="done"
+            style={
+              [
+                {
+                  "borderRadius": 6,
+                  "borderWidth": 1,
+                  "fontSize": 16,
+                  "padding": 6,
+                },
+                undefined,
+                {
+                  "borderColor": "#BACDDB",
+                },
+              ]
+            }
+          />
+        </View>
+        <View
+          style={
+            {
+              "marginVertical": 6,
+              "width": "100%",
+            }
+          }
+          testID="inputBirthdate"
+        >
+          <Text
+            style={
+              {
+                "color": "#BACDDB",
+                "fontSize": 13,
+                "marginBottom": 3,
+              }
+            }
+          >
+            Date of Birth
+          </Text>
+          <TextInput
+            inputMode="decimal"
+            onBlur={[Function]}
+            onChangeText={[Function]}
+            onFocus={[Function]}
+            placeholder="22.06.1988"
+            returnKeyType="done"
+            style={
+              [
+                {
+                  "borderRadius": 6,
+                  "borderWidth": 1,
+                  "fontSize": 16,
+                  "padding": 6,
+                },
+                undefined,
+                {
+                  "borderColor": "#BACDDB",
+                },
+              ]
+            }
+          />
+        </View>
+        <View
+          style={
+            {
+              "marginVertical": 6,
+              "width": "100%",
+            }
+          }
+          testID="inputProfession"
+        >
+          <Text
+            style={
+              {
+                "color": "#BACDDB",
+                "fontSize": 13,
+                "marginBottom": 3,
+              }
+            }
+          >
+            Profession
+          </Text>
+          <TextInput
+            onBlur={[Function]}
+            onChangeText={[Function]}
+            onFocus={[Function]}
+            placeholder="Employed | Student"
+            returnKeyType="done"
+            style={
+              [
+                {
+                  "borderRadius": 6,
+                  "borderWidth": 1,
+                  "fontSize": 16,
+                  "padding": 6,
+                },
+                undefined,
+                {
+                  "borderColor": "#BACDDB",
+                },
+              ]
+            }
+          />
+        </View>
+        <View
+          style={
+            {
+              "marginVertical": 6,
+              "width": "100%",
+            }
+          }
+          testID="inputLocality"
+        >
+          <Text
+            style={
+              {
+                "color": "#BACDDB",
+                "fontSize": 13,
+                "marginBottom": 3,
+              }
+            }
+          >
+            Locality
+          </Text>
+          <TextInput
+            onBlur={[Function]}
+            onChangeText={[Function]}
+            onFocus={[Function]}
+            placeholder="Dubai"
+            returnKeyType="done"
+            style={
+              [
+                {
+                  "borderRadius": 6,
+                  "borderWidth": 1,
+                  "fontSize": 16,
+                  "padding": 6,
+                },
+                undefined,
+                {
+                  "borderColor": "#BACDDB",
+                },
+              ]
+            }
+          />
+        </View>
+        <View
+          style={
+            {
+              "marginVertical": 6,
+              "width": "100%",
+            }
+          }
+          testID="inputGuestsCount"
+        >
+          <Text
+            style={
+              {
+                "color": "#BACDDB",
+                "fontSize": 13,
+                "marginBottom": 3,
+              }
+            }
+          >
+            Number of Guests
+          </Text>
+          <TextInput
+            inputMode="numeric"
+            onBlur={[Function]}
+            onChangeText={[Function]}
+            onFocus={[Function]}
+            placeholder="0-2"
+            returnKeyType="done"
+            style={
+              [
+                {
+                  "borderRadius": 6,
+                  "borderWidth": 1,
+                  "fontSize": 16,
+                  "padding": 6,
+                },
+                undefined,
+                {
+                  "borderColor": "#BACDDB",
+                },
+              ]
+            }
+          />
+        </View>
+        <View
+          style={
+            {
+              "marginVertical": 6,
+              "width": "100%",
+            }
+          }
+          testID="inputAddress"
+        >
+          <Text
+            style={
+              {
+                "color": "#BACDDB",
+                "fontSize": 13,
+                "marginBottom": 3,
+              }
+            }
+          >
+            Address
+          </Text>
+          <TextInput
+            blurOnSubmit={true}
+            maxLength={50}
+            multiline={true}
+            numberOfLines={2}
+            onBlur={[Function]}
+            onChangeText={[Function]}
+            onFocus={[Function]}
+            placeholder="Elm Street"
+            returnKeyType="done"
+            style={
+              [
+                {
+                  "borderRadius": 6,
+                  "borderWidth": 1,
+                  "fontSize": 16,
+                  "padding": 6,
+                },
+                {
+                  "height": 55,
+                },
+                {
+                  "borderColor": "#BACDDB",
+                },
+              ]
+            }
+            textAlignVertical="top"
+          />
+        </View>
+      </View>
+    </RCTScrollView>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        [
+          {
+            "backgroundColor": "#6D67E4",
+            "borderRadius": 16,
+            "paddingVertical": 16,
+            "width": "100%",
+          },
+          {
+            "marginTop": 32,
+          },
+        ]
+      }
+      testID="buttonSubmit"
+    >
+      <Text
+        style={
+          {
+            "color": "#FFFFFF",
+            "fontSize": 16,
+            "fontWeight": "500",
+            "textAlign": "center",
+          }
+        }
+      >
+        Submit
+      </Text>
+    </View>
+  </View>
+</View>
+`;

@@ -1,50 +1,51 @@
 import { InputsModel, Validation } from "./types";
+import Messages from "../../constants/Messages";
 
 export const validateInputs = (inputs: InputsModel): Validation => {
   const validation: Validation = { valid: true, inputs: {} as InputsModel };
 
   if (!inputs.name) {
-    validation.inputs.name = "Please input your name";
+    validation.inputs.name = Messages.please_input_your_name;
   }
 
   if (!inputs.age) {
-    validation.inputs.age = "Please input your age";
+    validation.inputs.age = Messages.please_input_your_age;
   } else if (
     !/^\d+$/.test(inputs.age) ||
     isNaN(parseInt(inputs.age)) ||
     parseInt(inputs.age) < 4
   ) {
-    validation.inputs.age = "Please input correct age";
+    validation.inputs.age = Messages.please_input_correct_age;
   }
 
   if (!inputs.birthdate) {
-    validation.inputs.birthdate = "Please input your date of birth";
+    validation.inputs.birthdate = Messages.please_input_your_date_of_birth;
   } else if (!parseDate(inputs.birthdate)) {
-    validation.inputs.birthdate = "Please input correct date of birth";
+    validation.inputs.birthdate = Messages.please_input_correct_date_of_birth;
   }
 
   if (!inputs.profession) {
-    validation.inputs.profession = "Please input your profession";
+    validation.inputs.profession = Messages.please_input_your_profession;
   } else if (
     inputs.profession !== "Employed" &&
     inputs.profession !== "Student"
   ) {
     validation.inputs.profession =
-      "Only two types of professions are supported: 'Employed' or 'Student'";
+      Messages.only_two_types_of_professions_are_supported;
   }
 
   if (!inputs.locality) {
-    validation.inputs.locality = "Please input your locality";
+    validation.inputs.locality = Messages.please_input_your_locality;
   }
 
   if (!inputs.guestsCount) {
-    validation.inputs.guestsCount = "Please input number of guests";
+    validation.inputs.guestsCount = Messages.please_input_number_of_guests;
   } else if (!/^0|1|2$/.test(inputs.guestsCount)) {
-    validation.inputs.guestsCount = "Allowed number of guests: 0, 1 or 2";
+    validation.inputs.guestsCount = Messages.allowed_number_of_guests;
   }
 
   if (!inputs.address) {
-    validation.inputs.address = "Please input your address";
+    validation.inputs.address = Messages.please_input_your_address;
   }
 
   // If any input has error message make validation as invalid

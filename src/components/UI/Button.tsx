@@ -11,13 +11,18 @@ import Colors from "../../constants/Colors";
 
 interface ButtonProps {
   style?: StyleProp<ViewStyle>;
+  testID?: string;
   title: string;
   onPress: () => void;
 }
 
-const Button: FC<ButtonProps> = ({ title, style, onPress }) => {
+const Button: FC<ButtonProps> = ({ style, testID, title, onPress }) => {
   return (
-    <Pressable style={[styles.container, style]} onPress={onPress}>
+    <Pressable
+      style={[styles.container, style]}
+      testID={testID}
+      onPress={onPress}
+    >
       <Text style={styles.title}>{title}</Text>
     </Pressable>
   );

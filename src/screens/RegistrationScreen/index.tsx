@@ -3,11 +3,14 @@ import { Keyboard, Text, View } from "react-native";
 
 import Form from "./Form";
 import Loader from "../../components/UI/Loader";
+import { validateInputs } from "./utils";
+import { RootDrawerScreenProps } from "../../navigation/types";
 import { InputsModel } from "./types";
 import { styles } from "./styles";
-import { validateInputs } from "./utils";
 
-const RegistrationScreen = () => {
+const RegistrationScreen = ({
+  navigation,
+}: RootDrawerScreenProps<"Registration">) => {
   const [loading, setLoading] = useState(false);
   const [inputs, setInputs] = useState<InputsModel>({
     name: "",
@@ -46,11 +49,14 @@ const RegistrationScreen = () => {
 
   const handleOnSubmit = () => {
     Keyboard.dismiss();
-
+    console.info("validate...");
     if (validate()) {
       setLoading(true);
       console.info("registering...");
-      setTimeout(() => setLoading(false), 3300);
+      setTimeout(() => {
+        setLoading(false);
+        navigation.navigate("Users");
+      }, 3300);
     }
   };
 

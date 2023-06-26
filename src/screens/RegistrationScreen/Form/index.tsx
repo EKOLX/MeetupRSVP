@@ -11,6 +11,7 @@ const Form: FC<Props> = ({ errors, onInputChange, onError, onSubmit }) => {
     <KeyboardAvoidingView style={styles.container} behavior="padding">
       <ScrollView showsVerticalScrollIndicator={false}>
         <Input
+          testID="inputName"
           label="Name"
           placeholder="Jack"
           error={errors.name}
@@ -18,6 +19,7 @@ const Form: FC<Props> = ({ errors, onInputChange, onError, onSubmit }) => {
           onChangeText={(text) => onInputChange(text, "name")}
         />
         <Input
+          testID="inputAge"
           label="Age"
           placeholder="33"
           inputMode="numeric"
@@ -26,6 +28,7 @@ const Form: FC<Props> = ({ errors, onInputChange, onError, onSubmit }) => {
           onChangeText={(text) => onInputChange(text, "age")}
         />
         <Input
+          testID="inputBirthdate"
           label="Date of Birth"
           placeholder="22.06.1988"
           inputMode="decimal"
@@ -34,6 +37,7 @@ const Form: FC<Props> = ({ errors, onInputChange, onError, onSubmit }) => {
           onChangeText={(text) => onInputChange(text, "birthdate")}
         />
         <Input
+          testID="inputProfession"
           label="Profession"
           placeholder="Employed | Student"
           error={errors.profession}
@@ -41,6 +45,7 @@ const Form: FC<Props> = ({ errors, onInputChange, onError, onSubmit }) => {
           onChangeText={(text) => onInputChange(text, "profession")}
         />
         <Input
+          testID="inputLocality"
           label="Locality"
           placeholder="Dubai"
           error={errors.locality}
@@ -48,6 +53,7 @@ const Form: FC<Props> = ({ errors, onInputChange, onError, onSubmit }) => {
           onChangeText={(text) => onInputChange(text, "locality")}
         />
         <Input
+          testID="inputGuestsCount"
           label="Number of Guests"
           placeholder="0-2"
           inputMode="numeric"
@@ -56,11 +62,12 @@ const Form: FC<Props> = ({ errors, onInputChange, onError, onSubmit }) => {
           onChangeText={(text) => onInputChange(text, "guestsCount")}
         />
         <Input
+          testID="inputAddress"
           style={styles.multiline}
           label="Address"
-          placeholder="Dzhorat street"
+          placeholder="Elm Street"
           multiline
-          numberOfLines={4}
+          numberOfLines={2}
           maxLength={50}
           textAlignVertical="top"
           blurOnSubmit
@@ -70,7 +77,12 @@ const Form: FC<Props> = ({ errors, onInputChange, onError, onSubmit }) => {
         />
       </ScrollView>
 
-      <Button style={styles.submit} title="Submit" onPress={onSubmit} />
+      <Button
+        style={styles.submit}
+        testID="buttonSubmit"
+        title="Submit"
+        onPress={onSubmit}
+      />
     </KeyboardAvoidingView>
   );
 };

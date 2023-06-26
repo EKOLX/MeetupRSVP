@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     width: "100%",
   },
   multiline: {
-    height: 81,
+    height: 55,
   },
   submit: {
     marginTop: 32,

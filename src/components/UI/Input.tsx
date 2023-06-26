@@ -3,19 +3,24 @@ import { StyleSheet, Text, TextInput, View } from "react-native";
 
 import Colors from "../../constants/Colors";
 
-type InputProps = TextInput["props"] & { label: string; error?: string };
+type InputProps = TextInput["props"] & {
+  label: string;
+  error?: string;
+  testID?: string;
+};
 
 const Input: FC<InputProps> = ({
-  label,
-  error,
   style,
   returnKeyType = "done",
+  label,
+  error,
+  testID,
   ...otherProps
 }) => {
   const [isFocused, setIsFocused] = useState(false);
 
   return (
-    <View style={styles.container}>
+    <View testID={testID} style={styles.container}>
       <Text style={styles.label}>{label}</Text>
       <TextInput
         style={[
