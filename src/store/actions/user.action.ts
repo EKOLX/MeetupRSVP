@@ -8,7 +8,12 @@ interface LoadAllAction {
   users: Array<User>;
 }
 
-export type UserAction = LoadAllAction;
+interface SearchAction {
+  type: "SEARCH_USER";
+  nameOrLocality: string;
+}
+
+export type UserAction = LoadAllAction | SearchAction;
 
 export const getAllUsers = () => async (dispatch: Dispatch<UserAction>) => {
   try {
@@ -16,3 +21,8 @@ export const getAllUsers = () => async (dispatch: Dispatch<UserAction>) => {
     dispatch({ type: "LOAD_ALL_USERS", users });
   } catch (error) {}
 };
+
+export const searchUser = (nameOrLocality: string): UserAction => ({
+  type: "SEARCH_USER",
+  nameOrLocality,
+});
