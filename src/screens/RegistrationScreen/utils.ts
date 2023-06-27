@@ -1,5 +1,6 @@
-import { InputsModel, Validation } from "./types";
+import User from "../../types/User";
 import Messages from "../../constants/Messages";
+import { InputsModel, Validation } from "./types";
 
 export const validateInputs = (inputs: InputsModel): Validation => {
   const validation: Validation = { valid: true, inputs: {} as InputsModel };
@@ -59,8 +60,15 @@ export const validateInputs = (inputs: InputsModel): Validation => {
   return validation;
 };
 
+export const convertInputsToUser = (inputs: InputsModel, id: number): User => ({
+  ...inputs,
+  id,
+  age: parseInt(inputs.age),
+  guestsCount: parseInt(inputs.locality),
+});
+
 function parseDate(value: string) {
-  const validDate = value.match(/^(\d{1,2}).(\d{1,2}).(\d{4})$/);
+  const validDate = value.match(/^(\d{1,2})[.,/](\d{1,2})[.,/](\d{4})$/);
   return validDate
     ? new Date(
         parseInt(validDate[3]),

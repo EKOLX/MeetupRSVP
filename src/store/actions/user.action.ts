@@ -8,12 +8,24 @@ interface LoadAllAction {
   users: Array<User>;
 }
 
+interface AddAction {
+  type: "ADD_USER";
+  user: User;
+}
+
 interface SearchAction {
   type: "SEARCH_USER";
   nameOrLocality: string;
 }
 
-export type UserAction = LoadAllAction | SearchAction;
+export type UserAction = LoadAllAction | AddAction | SearchAction;
+
+export const addUser =
+  (user: User) => async (dispatch: Dispatch<UserAction>) => {
+    try {
+      dispatch({ type: "ADD_USER", user });
+    } catch (error) {}
+  };
 
 export const getAllUsers = () => async (dispatch: Dispatch<UserAction>) => {
   try {

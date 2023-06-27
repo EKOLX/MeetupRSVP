@@ -4,6 +4,7 @@ import Form from "../index";
 import { InputsModel } from "../../types";
 
 describe("Registration screen: Form component", () => {
+  const inputs = {} as InputsModel;
   const inputErrors = {} as Partial<InputsModel>;
   const handleOnInputChange = jest.fn();
   const handleOnError = jest.fn();
@@ -11,6 +12,7 @@ describe("Registration screen: Form component", () => {
 
   const form = create(
     <Form
+      values={inputs}
       errors={inputErrors}
       onInputChange={handleOnInputChange}
       onError={handleOnError}

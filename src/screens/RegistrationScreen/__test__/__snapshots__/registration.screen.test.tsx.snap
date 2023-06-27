@@ -83,6 +83,7 @@ exports[`Registration screen should match snapshot 1`] = `
                 },
               ]
             }
+            value=""
           />
         </View>
         <View
@@ -127,6 +128,7 @@ exports[`Registration screen should match snapshot 1`] = `
                 },
               ]
             }
+            value=""
           />
         </View>
         <View
@@ -171,6 +173,7 @@ exports[`Registration screen should match snapshot 1`] = `
                 },
               ]
             }
+            value=""
           />
         </View>
         <View
@@ -214,6 +217,7 @@ exports[`Registration screen should match snapshot 1`] = `
                 },
               ]
             }
+            value=""
           />
         </View>
         <View
@@ -257,6 +261,7 @@ exports[`Registration screen should match snapshot 1`] = `
                 },
               ]
             }
+            value=""
           />
         </View>
         <View
@@ -301,6 +306,7 @@ exports[`Registration screen should match snapshot 1`] = `
                 },
               ]
             }
+            value=""
           />
         </View>
         <View
@@ -351,6 +357,7 @@ exports[`Registration screen should match snapshot 1`] = `
               ]
             }
             textAlignVertical="top"
+            value=""
           />
         </View>
       </View>

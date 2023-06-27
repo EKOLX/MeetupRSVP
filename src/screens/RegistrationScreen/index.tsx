@@ -1,27 +1,34 @@
 import { useState } from "react";
 import { Alert, Keyboard, Text, View } from "react-native";
+import { useDispatch, useSelector } from "react-redux";
 
+import { AppState } from "../../store/AppState";
+import * as userAction from "../../store/actions/user.action";
 import Form from "./Form";
 import Loader from "../../components/UI/Loader";
-import { validateInputs } from "./utils";
+import { convertInputsToUser, validateInputs } from "./utils";
 import { RootDrawerScreenProps } from "../../navigation/types";
 import { InputsModel } from "./types";
 import { styles } from "./styles";
+
+const initialInputValues = {
+  name: "",
+  age: "",
+  birthdate: "",
+  profession: "",
+  locality: "",
+  guestsCount: "",
+  address: "",
+};
 
 const RegistrationScreen = ({
   navigation,
 }: RootDrawerScreenProps<"Registration">) => {
   const [loading, setLoading] = useState(false);
-  const [inputs, setInputs] = useState<InputsModel>({
-    name: "",
-    age: "",
-    birthdate: "",
-    profession: "",
-    locality: "",
-    guestsCount: "",
-    address: "",
-  });
+  const [inputs, setInputs] = useState<InputsModel>(initialInputValues);
   const [inputErrors, setInputErrors] = useState<Partial<InputsModel>>({});
+  const allUsers = useSelector((state: AppState) => state.user.users); // TODO: temporary
+  const dispatch = useDispatch();
 
   const handleBeforeLeavingScreen = (event: any) => {
     let hasUnsavedChanges = false;
@@ -83,6 +90,10 @@ const RegistrationScreen = ({
       // TODO: register
       setTimeout(() => {
         setLoading(false);
+        setInputs(initialInputValues);
+        dispatch(
+          userAction.addUser(convertInputsToUser(inputs, allUsers.length + 1))
+        );
         navigation.navigate("Users");
       }, 3300);
     }
@@ -95,6 +106,7 @@ const RegistrationScreen = ({
       </Text>
 
       <Form
+        values={inputs}
         errors={inputErrors}
         onInputChange={handleOnInputChange}
         onError={handleOnError}

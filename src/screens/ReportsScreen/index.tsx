@@ -7,9 +7,11 @@ const ReportsScreen = ({
   route: { params },
 }: RootDrawerScreenProps<"Reports">) => {
   return (
-    <View style={styles.container}>
-      <Text>User {params.user.name}</Text>
-    </View>
+    params && (
+      <View style={styles.container}>
+        <Text>User {params.user.name}</Text>
+      </View>
+    )
   );
 };
 

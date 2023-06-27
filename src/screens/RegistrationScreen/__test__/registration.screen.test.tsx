@@ -7,6 +7,14 @@ import { RootDrawerScreenProps } from "../../../navigation/types";
 import Form from "../Form";
 
 jest.runAllTimers();
+jest.mock("react-redux", () => {
+  const ActualReactRedux = jest.requireActual("react-redux");
+  return {
+    ...ActualReactRedux,
+    useDispatch: jest.fn(),
+    useSelector: jest.fn().mockImplementation(() => ({})),
+  };
+});
 
 describe("Registration screen", () => {
   let registrationScreen: ReactTestRenderer;
