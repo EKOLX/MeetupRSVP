@@ -4,7 +4,7 @@ import { create, act, ReactTestRenderer } from "react-test-renderer";
 import RegistrationScreen from "../index";
 import Messages from "../../../constants/Messages";
 import { RootDrawerScreenProps } from "../../../navigation/types";
-import Form from "../Form";
+import Form from "../../../components/Form";
 
 jest.runAllTimers();
 jest.mock("react-redux", () => {

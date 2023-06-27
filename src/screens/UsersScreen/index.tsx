@@ -12,11 +12,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppState } from "../../store/AppState";
 import * as userAction from "../../store/actions/user.action";
 import Colors from "../../constants/Colors";
-import { RootDrawerScreenProps } from "../../navigation/types";
+import Loader from "../../components/UI/Loader";
+import { UserStackScreenProps } from "../../navigation/types";
 import User from "../../types/User";
 import { styles } from "./styles";
 
-const UsersScreen = ({ navigation }: RootDrawerScreenProps<"Users">) => {
+const UsersScreen = ({ navigation }: UserStackScreenProps<"Users">) => {
+  const [loading, setLoading] = useState(true);
   const [input, setInput] = useState("");
   const users = useSelector((state: AppState) => state.user.filteredUsers);
   const dispatch = useDispatch();
@@ -26,11 +28,15 @@ const UsersScreen = ({ navigation }: RootDrawerScreenProps<"Users">) => {
   }, [dispatch]);
 
   useEffect(() => {
+    if (users.length > 0) setLoading(false);
+  }, [users]);
+
+  useEffect(() => {
     dispatch(userAction.searchUser(input));
   }, [input]);
 
   const handleOnUserPress = (user: User) => {
-    navigation.navigate("Reports", { user });
+    navigation.navigate("UserDetails", { user });
   };
 
   const renderUser: ListRenderItem<User> = ({ item: user }) => {
@@ -60,7 +66,10 @@ const UsersScreen = ({ navigation }: RootDrawerScreenProps<"Users">) => {
         showsVerticalScrollIndicator={false}
         data={users}
         renderItem={renderUser}
+        keyExtractor={(user) => user.id.toString()}
       />
+
+      <Loader visible={loading} />
     </View>
   );
 };

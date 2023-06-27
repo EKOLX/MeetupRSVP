@@ -63,6 +63,7 @@ exports[`Registration screen should match snapshot 1`] = `
             Name
           </Text>
           <TextInput
+            editable={true}
             onBlur={[Function]}
             onChangeText={[Function]}
             onFocus={[Function]}
@@ -107,6 +108,7 @@ exports[`Registration screen should match snapshot 1`] = `
             Age
           </Text>
           <TextInput
+            editable={true}
             inputMode="numeric"
             onBlur={[Function]}
             onChangeText={[Function]}
@@ -152,6 +154,7 @@ exports[`Registration screen should match snapshot 1`] = `
             Date of Birth
           </Text>
           <TextInput
+            editable={true}
             inputMode="decimal"
             onBlur={[Function]}
             onChangeText={[Function]}
@@ -197,6 +200,7 @@ exports[`Registration screen should match snapshot 1`] = `
             Profession
           </Text>
           <TextInput
+            editable={true}
             onBlur={[Function]}
             onChangeText={[Function]}
             onFocus={[Function]}
@@ -241,6 +245,7 @@ exports[`Registration screen should match snapshot 1`] = `
             Locality
           </Text>
           <TextInput
+            editable={true}
             onBlur={[Function]}
             onChangeText={[Function]}
             onFocus={[Function]}
@@ -285,6 +290,7 @@ exports[`Registration screen should match snapshot 1`] = `
             Number of Guests
           </Text>
           <TextInput
+            editable={true}
             inputMode="numeric"
             onBlur={[Function]}
             onChangeText={[Function]}
@@ -331,6 +337,7 @@ exports[`Registration screen should match snapshot 1`] = `
           </Text>
           <TextInput
             blurOnSubmit={true}
+            editable={true}
             maxLength={50}
             multiline={true}
             numberOfLines={2}

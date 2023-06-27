@@ -1,7 +1,7 @@
 import { create } from "react-test-renderer";
 
 import Form from "../index";
-import { InputsModel } from "../../types";
+import { InputsModel } from "../../../screens/RegistrationScreen/types";
 
 describe("Registration screen: Form component", () => {
   const inputs = {} as InputsModel;

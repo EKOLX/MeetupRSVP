@@ -4,9 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { AppState } from "../../store/AppState";
 import * as userAction from "../../store/actions/user.action";
-import Form from "./Form";
+import Form from "../../components/Form";
 import Loader from "../../components/UI/Loader";
-import { convertInputsToUser, validateInputs } from "./utils";
+import { mapInputsToUser, validateInputs } from "./utils";
 import { RootDrawerScreenProps } from "../../navigation/types";
 import { InputsModel } from "./types";
 import { styles } from "./styles";
@@ -92,9 +92,9 @@ const RegistrationScreen = ({
         setLoading(false);
         setInputs(initialInputValues);
         dispatch(
-          userAction.addUser(convertInputsToUser(inputs, allUsers.length + 1))
+          userAction.addUser(mapInputsToUser(inputs, allUsers.length + 1))
         );
-        navigation.navigate("Users");
+        navigation.navigate("UserRoot");
       }, 3300);
     }
   };

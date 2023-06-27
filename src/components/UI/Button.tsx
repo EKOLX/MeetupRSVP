@@ -13,7 +13,7 @@ interface ButtonProps {
   style?: StyleProp<ViewStyle>;
   testID?: string;
   title: string;
-  onPress: () => void;
+  onPress?: () => void;
 }
 
 const Button: FC<ButtonProps> = ({ style, testID, title, onPress }) => {

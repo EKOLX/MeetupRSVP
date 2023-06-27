@@ -1,5 +1,5 @@
-import User from "../../types/User";
 import Messages from "../../constants/Messages";
+import User from "../../types/User";
 import { InputsModel, Validation } from "./types";
 
 export const validateInputs = (inputs: InputsModel): Validation => {
@@ -14,14 +14,17 @@ export const validateInputs = (inputs: InputsModel): Validation => {
   } else if (
     !/^\d+$/.test(inputs.age) ||
     isNaN(parseInt(inputs.age)) ||
-    parseInt(inputs.age) < 4
+    parseInt(inputs.age) < 13
   ) {
     validation.inputs.age = Messages.please_input_correct_age;
   }
 
   if (!inputs.birthdate) {
     validation.inputs.birthdate = Messages.please_input_your_date_of_birth;
-  } else if (!parseDate(inputs.birthdate)) {
+  } else if (
+    !parseDate(inputs.birthdate) ||
+    new Date().getFullYear() - parseDate(inputs.birthdate)!.getFullYear() < 13
+  ) {
     validation.inputs.birthdate = Messages.please_input_correct_date_of_birth;
   }
 
@@ -60,14 +63,14 @@ export const validateInputs = (inputs: InputsModel): Validation => {
   return validation;
 };
 
-export const convertInputsToUser = (inputs: InputsModel, id: number): User => ({
+export const mapInputsToUser = (inputs: InputsModel, id: number): User => ({
   ...inputs,
   id,
   age: parseInt(inputs.age),
   guestsCount: parseInt(inputs.locality),
 });
 
-function parseDate(value: string) {
+function parseDate(value: string): Date | null {
   const validDate = value.match(/^(\d{1,2})[.,/](\d{1,2})[.,/](\d{4})$/);
   return validDate
     ? new Date(
