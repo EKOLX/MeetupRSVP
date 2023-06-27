@@ -28,6 +28,7 @@ const Input: FC<InputProps> = ({
           style,
           { borderColor: error && !isFocused ? Colors.red : Colors.gray },
         ]}
+        placeholderTextColor={Colors.gray}
         returnKeyType={returnKeyType}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}

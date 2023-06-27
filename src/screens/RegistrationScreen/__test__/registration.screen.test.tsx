@@ -124,7 +124,7 @@ describe("Registration screen", () => {
     });
 
     act(() => {
-      inputName.findByType(TextInput as any).props.onChangeText("EL Khan");
+      inputName.props.onChangeText("EL Khan");
       inputAge.props.onChangeText("33");
       inputBirthdate.props.onChangeText("22.06.2002");
       inputProfession.props.onChangeText("Employed");

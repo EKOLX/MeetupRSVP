@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Keyboard, Text, View } from "react-native";
+import { Alert, Keyboard, Text, View } from "react-native";
 
 import Form from "./Form";
 import Loader from "../../components/UI/Loader";
@@ -22,6 +22,34 @@ const RegistrationScreen = ({
     address: "",
   });
   const [inputErrors, setInputErrors] = useState<Partial<InputsModel>>({});
+
+  const handleBeforeLeavingScreen = (event: any) => {
+    let hasUnsavedChanges = false;
+
+    for (const input in inputs) {
+      if (inputs[input as keyof InputsModel]) {
+        hasUnsavedChanges = true;
+        break;
+      }
+    }
+
+    if (hasUnsavedChanges) {
+      Alert.alert(
+        "Discard changes?",
+        "You have unsaved changes. Are you sure to discard them and leave the screen?",
+        [
+          { text: "Don't leave", style: "cancel" },
+          {
+            text: "Discard",
+            style: "destructive",
+            onPress: () => {
+              // TODO: Leave the screen
+            },
+          },
+        ]
+      );
+    }
+  };
 
   const handleOnInputChange = (text: string, input: keyof InputsModel) => {
     setInputs((prevState) => ({ ...prevState, [input]: text }));
@@ -49,10 +77,10 @@ const RegistrationScreen = ({
 
   const handleOnSubmit = () => {
     Keyboard.dismiss();
-    console.info("validate...");
+
     if (validate()) {
       setLoading(true);
-      console.info("registering...");
+      // TODO: register
       setTimeout(() => {
         setLoading(false);
         navigation.navigate("Users");

@@ -67,6 +67,7 @@ exports[`Registration screen should match snapshot 1`] = `
             onChangeText={[Function]}
             onFocus={[Function]}
             placeholder="Jack"
+            placeholderTextColor="#BACDDB"
             returnKeyType="done"
             style={
               [
@@ -110,6 +111,7 @@ exports[`Registration screen should match snapshot 1`] = `
             onChangeText={[Function]}
             onFocus={[Function]}
             placeholder="33"
+            placeholderTextColor="#BACDDB"
             returnKeyType="done"
             style={
               [
@@ -153,6 +155,7 @@ exports[`Registration screen should match snapshot 1`] = `
             onChangeText={[Function]}
             onFocus={[Function]}
             placeholder="22.06.1988"
+            placeholderTextColor="#BACDDB"
             returnKeyType="done"
             style={
               [
@@ -195,6 +198,7 @@ exports[`Registration screen should match snapshot 1`] = `
             onChangeText={[Function]}
             onFocus={[Function]}
             placeholder="Employed | Student"
+            placeholderTextColor="#BACDDB"
             returnKeyType="done"
             style={
               [
@@ -237,6 +241,7 @@ exports[`Registration screen should match snapshot 1`] = `
             onChangeText={[Function]}
             onFocus={[Function]}
             placeholder="Dubai"
+            placeholderTextColor="#BACDDB"
             returnKeyType="done"
             style={
               [
@@ -280,6 +285,7 @@ exports[`Registration screen should match snapshot 1`] = `
             onChangeText={[Function]}
             onFocus={[Function]}
             placeholder="0-2"
+            placeholderTextColor="#BACDDB"
             returnKeyType="done"
             style={
               [
@@ -326,6 +332,7 @@ exports[`Registration screen should match snapshot 1`] = `
             onChangeText={[Function]}
             onFocus={[Function]}
             placeholder="Elm Street"
+            placeholderTextColor="#BACDDB"
             returnKeyType="done"
             style={
               [
