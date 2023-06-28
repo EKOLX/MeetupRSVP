@@ -24,10 +24,6 @@ const UsersScreen = ({ navigation }: UserStackScreenProps<"Users">) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(userAction.getAllUsers());
-  }, [dispatch]);
-
-  useEffect(() => {
     if (users.length > 0) setLoading(false);
   }, [users]);
 

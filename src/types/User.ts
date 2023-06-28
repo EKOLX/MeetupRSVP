@@ -3,7 +3,7 @@ export default interface User {
   name: string;
   age: number;
   birthdate: string;
-  profession: string;
+  profession: "Employed" | "Student";
   locality: string;
   guestsCount: number;
   address: string;

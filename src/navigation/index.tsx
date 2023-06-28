@@ -1,7 +1,10 @@
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createStackNavigator } from "@react-navigation/stack";
 
+import { getAllUsers } from "../store/actions/user.action";
 import { RootDrawerParamList, UserStackParamList } from "./types";
 import RegistrationScreen from "../screens/RegistrationScreen";
 import UsersScreen from "../screens/UsersScreen";
@@ -12,6 +15,12 @@ const Drawer = createDrawerNavigator<RootDrawerParamList>();
 const Stack = createStackNavigator<UserStackParamList>();
 
 export default function Navigation() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getAllUsers());
+  }, [dispatch]);
+
   return (
     <NavigationContainer>
       <Drawer.Navigator id="Drawer">

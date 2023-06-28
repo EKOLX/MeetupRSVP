@@ -68,6 +68,7 @@ export const mapInputsToUser = (inputs: InputsModel, id: number): User => ({
   id,
   age: parseInt(inputs.age),
   guestsCount: parseInt(inputs.locality),
+  profession: inputs.profession as User["profession"],
 });
 
 function parseDate(value: string): Date | null {
