@@ -2,7 +2,7 @@ import { useLayoutEffect } from "react";
 import { View } from "react-native";
 
 import { UserStackScreenProps } from "../../navigation/types";
-import Form from "../../components/Form";
+import Form from "../../components/Form/Form";
 import { mapUserToInputs } from "./utils";
 import { styles } from "./styles";
 

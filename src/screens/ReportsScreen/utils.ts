@@ -28,6 +28,7 @@ export const groupUsers = (users: Array<User>) => {
     else if (user.profession === "Student") professionCount.student += 1;
   });
 
+  // ageRanges
   const ageRanges: Array<AgeRange> = [];
   for (const ageRange in ageGroup) {
     ageRanges.push({
@@ -36,6 +37,7 @@ export const groupUsers = (users: Array<User>) => {
     });
   }
 
+  // localities
   const localities: Array<Locality> = [];
   for (const locality in localityGroup) {
     localities.push({

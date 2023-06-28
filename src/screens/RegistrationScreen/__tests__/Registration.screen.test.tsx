@@ -1,10 +1,10 @@
-import { Text, TextInput } from "react-native";
+import { Text } from "react-native";
 import { create, act, ReactTestRenderer } from "react-test-renderer";
 
 import RegistrationScreen from "../index";
 import Messages from "../../../constants/Messages";
 import { RootDrawerScreenProps } from "../../../navigation/types";
-import Form from "../../../components/Form";
+import Form from "../../../components/Form/Form";
 
 jest.runAllTimers();
 jest.mock("react-redux", () => {

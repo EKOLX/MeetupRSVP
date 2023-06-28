@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { AppState } from "../../store/AppState";
 import * as userAction from "../../store/actions/user.action";
-import Form from "../../components/Form";
+import Form from "../../components/Form/Form";
 import Loader from "../../components/UI/Loader";
 import { mapInputsToUser, validateInputs } from "./utils";
 import { RootDrawerScreenProps } from "../../navigation/types";

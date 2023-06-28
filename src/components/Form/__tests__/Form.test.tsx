@@ -1,6 +1,6 @@
 import { create } from "react-test-renderer";
 
-import Form from "../index";
+import Form from "../Form";
 import { InputsModel } from "../../../screens/RegistrationScreen/types";
 
 describe("Form component", () => {
