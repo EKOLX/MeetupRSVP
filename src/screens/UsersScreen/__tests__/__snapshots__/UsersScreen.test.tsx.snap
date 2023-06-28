@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Users screen should match snapshot 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+      "padding": 32,
+    }
+  }
+>
+  <TextInput
+    onChangeText={[Function]}
+    placeholder="Search..."
+    placeholderTextColor="#BACDDB"
+    style={
+      {
+        "borderColor": "#BACDDB",
+        "borderRadius": 6,
+        "borderWidth": 1,
+        "padding": 6,
+        "width": "100%",
+      }
+    }
+    value=""
+  />
+  <RCTScrollView
+    data={{}}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    showsVerticalScrollIndicator={false}
+    stickyHeaderIndices={[]}
+    style={
+      {
+        "marginTop": 22,
+        "width": "100%",
+      }
+    }
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View />
+  </RCTScrollView>
+  <RCTSafeAreaView
+    style={
+      {
+        "backgroundColor": "rgba(0, 0, 0, 0.6)",
+        "height": 1334,
+        "justifyContent": "center",
+        "position": "absolute",
+        "width": 750,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 9,
+          "flexDirection": "row",
+          "marginHorizontal": 70,
+          "padding": 16,
+        }
+      }
+    >
+      <ActivityIndicator
+        color="#6D67E4"
+        size="large"
+      />
+      <Text
+        style={
+          {
+            "fontSize": 16,
+            "marginLeft": 6,
+          }
+        }
+      >
+        Loading...
+      </Text>
+    </View>
+  </RCTSafeAreaView>
+</View>
+`;
