@@ -5,5 +5,5 @@ export interface AgeRange {
 
 export interface Locality {
   locality: string;
-  count: 0;
+  count: number;
 }

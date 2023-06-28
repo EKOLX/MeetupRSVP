@@ -4,9 +4,9 @@ import { useSelector } from "react-redux";
 
 import { AppState } from "../../store/AppState";
 import { RootDrawerScreenProps } from "../../navigation/types";
-import AgeRanges from "./AgeRanges";
-import Statistics from "./Statistics";
-import GroupedLocalities from "./GroupedLocalities";
+import AgeRanges from "./AgeRanges/AgeRanges";
+import Statistics from "./Statistics/Statistics";
+import GroupedLocalities from "./GroupedLocalities/GroupedLocalities";
 import { groupUsers } from "./utils";
 import { styles } from "./styles";
 

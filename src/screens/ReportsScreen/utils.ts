@@ -43,6 +43,9 @@ export const groupUsers = (users: Array<User>) => {
       count: localityGroup[locality as keyof typeof localityGroup],
     });
   }
+  localities.sort((a, b) =>
+    a.locality > b.locality ? 1 : b.locality > a.locality ? -1 : 0
+  );
 
   return {
     ageRanges,

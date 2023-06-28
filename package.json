@@ -41,11 +41,11 @@
   },
   "jest": {
     "preset": "react-native",
+    "verbose": true,
     "setupFiles": [
       "<rootDir>/src/__mocks__/jestSetup.js"
     ],
-    "verbose": true,
-    "collectCoverage": false,
+    "collectCoverage": true,
     "collectCoverageFrom": [
       "**/*.{ts,tsx}",
       "!**/node_modules/**"

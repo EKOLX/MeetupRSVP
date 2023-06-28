@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GroupedLocalities component should match snapshot 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+      "marginTop": 22,
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "fontSize": 16,
+      }
+    }
+  >
+    Grouped by Localities
+  </Text>
+  <RCTScrollView
+    data={
+      [
+        {
+          "count": 3,
+          "locality": "Prague",
+        },
+        {
+          "count": 5,
+          "locality": "Russia",
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    showsVerticalScrollIndicator={false}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "borderBottomColor": "#BACDDB",
+              "borderBottomWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 4,
+            }
+          }
+        >
+          <Text>
+            Prague
+          </Text>
+          <Text>
+            3
+          </Text>
+        </View>
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "borderBottomColor": "#BACDDB",
+              "borderBottomWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 4,
+            }
+          }
+        >
+          <Text>
+            Russia
+          </Text>
+          <Text>
+            5
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

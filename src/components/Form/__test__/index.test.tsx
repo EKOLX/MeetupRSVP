@@ -3,7 +3,7 @@ import { create } from "react-test-renderer";
 import Form from "../index";
 import { InputsModel } from "../../../screens/RegistrationScreen/types";
 
-describe("Registration screen: Form component", () => {
+describe("Form component", () => {
   const inputs = {} as InputsModel;
   const inputErrors = {} as Partial<InputsModel>;
   const handleOnInputChange = jest.fn();
